@@ -1,6 +1,6 @@
 import { NextFunction, Response } from "express";
 import { MyRequest } from "../../utils/types/req";
-import { deleteBlogService } from "../../services/blog/deleteBlogService";
+import { deleteBlogService } from "../../services/blogService/deleteBlogService";
 
 export const deleteBlogApi = async (
   req: MyRequest,

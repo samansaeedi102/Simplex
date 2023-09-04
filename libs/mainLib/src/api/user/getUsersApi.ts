@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { GetUsersInp } from "../../database/repository/userRepo/getUsersRepo";
-import { getUsersService } from "../../services/user/getUsersService";
+import { getUsersService } from "../../services/userService/getUsersService";
 export const getUsersApi = async (
   req: Request,
   res: Response,

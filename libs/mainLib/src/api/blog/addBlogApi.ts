@@ -1,6 +1,6 @@
 import { NextFunction, Response } from "express";
 import { MyRequest } from "../../utils/types/req";
-import { addBlogService } from "../../services/blog/addBlogService";
+import { addBlogService } from "../../services/blogService/addBlogService";
 
 
 export const addBlogApi = async (

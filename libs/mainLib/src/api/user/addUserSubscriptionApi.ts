@@ -1,6 +1,6 @@
 import { MyRequest } from "../../utils/types/req";
 import { NextFunction, Response } from "express";
-import { addUserSubscriptionService } from "../../services/user/addUserSubscriptionService";
+import { addUserSubscriptionService } from "../../services/userService/addUserSubscriptionService";
 
 export const addUserSubscriptionApi = async (
     req: MyRequest,

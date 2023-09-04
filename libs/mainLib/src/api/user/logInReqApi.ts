@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import { logInReqService } from "../../services/user/logInReqService";
+import { logInReqService } from "../../services/userService/logInReqService";
 
 export const logInReqApi = async (
   req: Request,

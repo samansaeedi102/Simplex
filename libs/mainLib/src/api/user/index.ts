@@ -7,6 +7,7 @@ import { getUserApi} from "./getUserApi"
 import { logInApi} from './logInApi';
 import { auth } from "../middlewares/auth";
 import { logInReqApi } from "../user/logInReqApi"
+import { updateUserByTokenApi } from "./updateUserByTokenApi";
 
 export const userApi = (
     app: Express,
@@ -42,11 +43,11 @@ export const userApi = (
         "/user/getany/:_id",
         (req, res, next) => getUserApi(req, res, next, redisConnections)
     );
-    // app.put(
-    //     "/user/update",
-    //     (req, res, next) => auth(req, res, next),
-    //     (req, res, next) => updateUserByTokenApi(req as MyRequest, res, next)
-    // );
+    app.put(
+        "/user/update",
+        (req, res, next) => auth(req, res, next),
+        (req, res, next) => updateUserByTokenApi(req as MyRequest, res, next, redisConnections)
+    );
     app.get(
         "/user/users",
         (req, res, next) => getUsersApi(req, res, next)
