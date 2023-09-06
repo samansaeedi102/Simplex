@@ -5,7 +5,7 @@ import { MyRequest} from "../../../../mainLib/src/utils/types/req";
 
 export const ValidateSignature = async (req: MyRequest) => {
   const signature = req.get("Authorization");
-
+  console.log(signature)
   const addUserToReq = () => {
     try {
       const payload: any = jwt.verify(signature, CONFIG().APP_SECRET as string);

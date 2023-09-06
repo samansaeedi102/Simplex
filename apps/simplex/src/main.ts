@@ -21,7 +21,7 @@ const app = async (
     app.get('/', (req, res) => {
       res.send(JSON.stringify({ name: "saman", family: "saeedi" }));
     });
-    blogApi(app);
+    blogApi(app, redisConnection);
     userApi(app, redisConnection);
   })
 }

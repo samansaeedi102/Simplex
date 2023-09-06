@@ -19,10 +19,7 @@ export const addBlogRepo = async (addBlogRepoInp: AddBlogInp) => {
     try {
         assert(addBlogRepoInp, AddBlogStruct);
         const {title, description,author} = addBlogRepoInp;
-        // const foundAuthor = await User.findById()
-
-        const foundAuthor = await UserModel.findById(author).exec();
-
+        const foundAuthor = await UserModel.findById(author).exec()
         const createBlogPost = async () => {
             const newBlogPost = new BlogModel({
                 title,

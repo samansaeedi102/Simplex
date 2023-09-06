@@ -3,7 +3,8 @@ import { formatData } from "../../../../utils/src/lib/format/formatData";
 import { AddBlogInp, addBlogRepo } from "../../database/repository/blogRepo/addBlogRepo";
 
 export interface addBlogServiceInp {
-    inputs: AddBlogInp;
+    inputs: AddBlogInp,
+    redisConnections: any
 };
 
 export const addBlogService = async (inputs: addBlogServiceInp) => {
